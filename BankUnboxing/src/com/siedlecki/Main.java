@@ -27,28 +27,11 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         Bank bank = new Bank();
+        Customer tim = new Customer("Tim");
+        Customer bob = new Customer("Bob");
+        bank.addBranch(tim);
+        bank.addTransactionCustomer(400,tim,bank.getBranches().get(0));
+
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
