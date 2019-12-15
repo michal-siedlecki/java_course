@@ -22,16 +22,29 @@ package com.siedlecki;
 // e.g. check if exists, or does not exist, etc.
 // Think about where you are adding the code to perform certain actions
 
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        
         Bank bank = new Bank();
-        Customer tim = new Customer("Tim");
-        Customer bob = new Customer("Bob");
-        bank.addBranch(tim);
-        bank.addTransactionCustomer(400,tim,bank.getBranches().get(0));
+        bank.addNewBranch("morning");
+        bank.addNewBranch("evening");
 
+        bank.addCustomerToBranch("tim","morning", 45.76);
+        bank.addCustomerToBranch("john","morning", 745.76);
+        bank.addCustomerToBranch("bob","evening", 458.76);
+        bank.addCustomerToBranch("john","evening", 645.76);
 
+        bank.addTransactionForCustomer("bob", "morning", 45.90);
+        bank.addTransactionForCustomer("john", "morning", 45.90);
+        System.out.println("morning customers: ");
+        bank.printCustomersOfBranch("morning");
+        System.out.println("evening customers: ");
+        bank.printCustomersOfBranch("evening");
+
+        System.out.println("morning transactions with customers: ");
+        bank.printCustomersAndTransactionsOfBranch("morning");
     }
 }
