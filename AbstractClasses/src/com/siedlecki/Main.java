@@ -11,11 +11,12 @@ package com.siedlecki;
 //
 // The class will also need methods to move to the next item and back to the previous item,
 // and methods to set the next and previous items.
+//*******
 //
 // You should also specify a compareTo() method that takes a parameter of the same type as the
 // class and returns 0 if the values are equal, greater than zero if the value sorts greater than
 // the parameter and less than zero if it sorts less than the parameter.
-//
+//*****
 // Create a concrete class from your abstract list item class and use this in a LinkedList
 // class to implement a linked list that will add items in order (so that they are sorted
 // alphabetically). Duplicate values are not added.
@@ -34,12 +35,48 @@ package com.siedlecki;
 // item).
 //
 // You will also need a method to remove an item from the list.
+//*****************************************************************************************************
+
+// Hint: If you are creating classes with names such as List, LinkedList, Node etc, make sure that
+// you create your classes before referring to them. In previous videos we have often referred to
+// classes that we create later, but if you use names that IntelliJ recognises as Java classes (such
+// as LinkedList) then it will create imports for them and possibly cause you problems later.
+
+//******************************
+
+// Optional: create a class to use your concrete class to implement a Binary Search Tree:
+// When adding items to a Binary Search Tree, if the item to be added is less than the current item
+// then move to the left, if it is greater than the current item then move to the right.
 //
+// The new item is added when an attempt to move in the required direction would involve following a
+// null reference.
+// Once again, duplicates are not allowed.
+//
+// Hint: to avoid typing loads of "addItem" lines, split a string into an array and create your list in
+// a loop as in the example below.
+//
+// Create a string data array to avoid typing loads of addItem instructions:
+//
+
 
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+
+        OrderedList myList = new OrderedList();
+
+        String stringData = "Darwin Brisbane Perth Melbourne Canberra Adelaide Sydney Canberra";
+        String[] data = stringData.split(" ");
+
+        for (String item : data){
+            myList.add(item);
+            myList.printValues();
+
+        }
+
+
     }
+
 }

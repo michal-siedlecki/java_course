@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GoldenSeries:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GoldenSeries_jar</output-path>
+    <root id="archive" name="GoldenSeries.jar">
+      <element id="module-output" name="GoldenSeries" />
+    </root>
+  </artifact>
+</component>

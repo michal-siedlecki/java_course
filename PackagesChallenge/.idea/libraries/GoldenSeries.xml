@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="GoldenSeries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../GoldenSeries/out/artifacts/GoldenSeries_jar/GoldenSeries.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

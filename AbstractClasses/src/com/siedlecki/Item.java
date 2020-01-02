@@ -1,28 +1,17 @@
 package com.siedlecki;
 
 public abstract class Item {
-    private Value value;
-    private Item previous;
-    private Item next;
+    protected Item previous;
+    protected Item next;
+    public String value;
 
-    public Item(Value value) {
-        this.value = value;
-    }
 
-    public Item getPrevious() {
-        return previous;
-    }
+    abstract Item getPrevious();
+    abstract void setPrevious(Item previous);
+    abstract Item getNext();
+    abstract void setNext(Item next);
+    abstract String getValue();
+    abstract boolean isHead();
+    abstract boolean isTail();
 
-    public void setPrevious(Item previous) {
-        this.previous = previous;
-    }
-
-    public Item getNext() {
-        return next;
-    }
-
-    public void setNext(Item next) {
-        this.next = next;
-    }
-    
 }
